@@ -6,7 +6,7 @@ import { ethers } from "ethers";
 import "@rainbow-me/rainbowkit/styles.css";
 import { useAccount, useContractRead } from "wagmi";
 import logo from "./assets/alchemy.png";
-import { ABI } from "./components/Abi";
+import { ABI } from "./components/Abi"; 
 
 function App() {
   const [addr, setAddr] = useState(false);

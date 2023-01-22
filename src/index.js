@@ -15,7 +15,7 @@ import { BrowserRouter } from "react-router-dom";
 
 var goerliChain = {
   id: 5,
-  name: "Goreli Testnet",
+  name: "Goreli Testnet", 
   network: "goerli",
   nativeCurrency: {
     decimals: 18,
