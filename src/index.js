@@ -9,7 +9,7 @@ import {
   RainbowKitProvider,
   darkTheme,
 } from "@rainbow-me/rainbowkit";
-import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import { BrowserRouter } from "react-router-dom";
 
