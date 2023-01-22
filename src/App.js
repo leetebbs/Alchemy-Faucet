@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { ethers } from "ethers";
 import "@rainbow-me/rainbowkit/styles.css";
-import { useAccount, useContractRead } from "wagmi";
+import { useAccount } from "wagmi";
 import logo from "./assets/alchemy.png";
 import { ABI } from "./components/Abi"; 
 
@@ -12,18 +12,28 @@ function App() {
   const [addr, setAddr] = useState(false);
   const { address } = useAccount();
   const [isHolder, setIsHolder] = useState(false);
+  const [balance, setBalance] = useState();
 
   const contractAddress = "0x6EA8F47440c54cFEd54feEF1E6d07110ba0dce9B";
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
   const contract = new ethers.Contract(contractAddress, ABI, provider);
   const withSigner = contract.connect(signer);
-  const { data } = useContractRead({
-    address: contractAddress,
-    abi: ABI,
-    functionName: "balance",
-  });
-  const balance = ethers.utils.formatEther(data);
+  // const { data } = useContractRead({
+  //   address: contractAddress,
+  //   abi: ABI,
+  //   functionName: "balance",
+  // });
+  // const balance = ethers.utils.formatEther(data);
+
+  //fetch balance with ethers
+  async function faucetBalance(){
+    const tx= await contract.balance();
+    console.log(ethers.utils.formatEther(tx))
+    setBalance(ethers.utils.formatEther(tx))
+  }
+
+  faucetBalance()
 
   // check if user has a alchemy nft in their wallet
   const options = { method: "GET", headers: { accept: "application/json" } };
