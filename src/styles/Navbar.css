@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.bold{
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 700px){
+    /* .container{
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;
+    } */
+  }

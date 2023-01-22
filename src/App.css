@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(19, 19, 19);
+  /* background: linear-gradient(180deg, rgba(93,144,224,1) 9%, rgba(28,51,94,1) 100%); */
+  color:white;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.madeBy{
+  font-size: x-small;
+  padding-top: 20px;
+}
+
+.Send-eth-button{
+  background: rgb(93,144,224);
+background: linear-gradient(180deg, rgba(93,144,224,1) 9%, rgba(28,51,94,1) 100%);
+  color:white;
+  width:150px;
+  height:40px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.Donate-button{
+  margin-top:20px;
+  background: rgb(93,144,224);
+background: linear-gradient(180deg, rgba(93,144,224,1) 9%, rgba(28,51,94,1) 100%);
+  color:white;
+  width:150px;
+  height:40px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.connectButton{
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notConnected{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:15%;
+}
+
+.containerConnected{
+  margin-top: 5%;
+}
+
+.userAddress{
+  font-size: small;
+  font-weight:bold;
+  margin-bottom: 50px;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (min-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+  .geteth-bar{
+    background-color:rgb(19, 19, 19);
+    height: 100vh;
+  }
+  .App-header{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+  }
+
+}
